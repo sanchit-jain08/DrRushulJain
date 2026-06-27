@@ -336,10 +336,13 @@
 
         .expertise-card {
             background-color: var(--bg-card);
-            padding: 50px 40px;
+            padding: 0;
             border: 1px solid rgba(0, 0, 0, 0.02);
             box-shadow: 0 10px 40px rgba(0,0,0,0.01);
             transition: var(--transition);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .expertise-card:hover {
@@ -348,19 +351,34 @@
             border-color: rgba(200, 162, 77, 0.2);
         }
 
-        .expertise-icon {
-            color: var(--accent-gold);
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            display: block;
-            font-weight: 700;
+        .card-img-wrapper {
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+            background-color: #F3F3F0;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .expertise-card:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-body-content {
+            padding: 35px 30px;
+            flex-grow: 1;
         }
 
         .expertise-card h3 {
             font-family: var(--font-serif);
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             color: var(--text-main);
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             font-weight: 400;
         }
 
@@ -460,17 +478,24 @@
 
         .award-card {
             background: var(--bg-card);
-            padding: 45px 40px;
+            padding: 0;
             border: 1px solid rgba(0, 0, 0, 0.01);
             box-shadow: 0 10px 40px rgba(0,0,0,0.01);
             position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
         }
 
-        .award-badge {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            display: inline-block;
-            color: var(--accent-gold);
+        .award-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+            border-color: rgba(200, 162, 77, 0.2);
+        }
+
+        .award-card:hover .card-img-wrapper img {
+            transform: scale(1.05);
         }
 
         .award-title {
@@ -757,44 +782,76 @@
         <h2 class="section-title">Clinical Specializations</h2>
         <div class="expertise-grid">
             <div class="expertise-card">
-                <span class="expertise-icon">✓</span>
-                <h3>Bilio-Pancreatic Surgery</h3>
-                <p>Highly complex laparoscopic and robotic systems mapping gall bladder stone extractions, common bile duct treatments, and specialized pancreatic procedures.</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor2.jpg" alt="Bilio-Pancreatic Surgery">
+                </div>
+                <div class="card-body-content">
+                    <h3>Bilio-Pancreatic Surgery</h3>
+                    <p>Highly complex laparoscopic and robotic systems mapping gall bladder stone extractions, common bile duct treatments, and specialized pancreatic procedures.</p>
+                </div>
             </div>
             <div class="expertise-card">
-                <span class="expertise-icon">✓</span>
-                <h3>Abdominal Wall & Hernia</h3>
-                <p>Advanced Laparoscopic / Robotic reconstructions engineered explicitly for complex abdominal hernias and structural transformations.</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor2.jpg" alt="Abdominal Wall & Hernia">
+                </div>
+                <div class="card-body-content">
+                    <h3>Abdominal Wall & Hernia</h3>
+                    <p>Advanced Laparoscopic / Robotic reconstructions engineered explicitly for complex abdominal hernias and structural transformations.</p>
+                </div>
             </div>
             <div class="expertise-card">
-                <span class="expertise-icon">✓</span>
-                <h3>Bariatric & Metabolic</h3>
-                <p>Targeted therapeutic pathways controlling morbid obesity and related metabolic abnormalities via weight loss and tailored diabetes operations.</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor2.jpg" alt="Bariatric & Metabolic">
+                </div>
+                <div class="card-body-content">
+                    <h3>Bariatric & Metabolic</h3>
+                    <p>Targeted therapeutic pathways controlling morbid obesity and related metabolic abnormalities via weight loss and tailored diabetes operations.</p>
+                </div>
             </div>
             <div class="expertise-card">
-                <span class="expertise-icon">✓</span>
-                <h3>Anti-Reflux Systems</h3>
-                <p>Precise surgical corrections mapping out high-grade GERD complications, anti-reflux adjustments, and hiatus hernia fixes.</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor2.jpg" alt="Anti-Reflux Systems">
+                </div>
+                <div class="card-body-content">
+                    <h3>Anti-Reflux Systems</h3>
+                    <p>Precise surgical corrections mapping out high-grade GERD complications, anti-reflux adjustments, and hiatus hernia fixes.</p>
+                </div>
             </div>
             <div class="expertise-card">
-                <span class="expertise-icon">✓</span>
-                <h3>Proctology LASER Solutions</h3>
-                <p>Next-generation minimally invasive laser systems structured for clean therapeutic intervention of Piles, Fissures, Fistulas, and Pilonidal Sinuses.</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor2.jpg" alt="Proctology LASER Solutions">
+                </div>
+                <div class="card-body-content">
+                    <h3>Proctology LASER Solutions</h3>
+                    <p>Next-generation minimally invasive laser systems structured for clean therapeutic intervention of Piles, Fissures, Fistulas, and Pilonidal Sinuses.</p>
+                </div>
             </div>
             <div class="expertise-card">
-                <span class="expertise-icon">✓</span>
-                <h3>Colorectal & Intestinal</h3>
-                <p>Comprehensive laparoscopic or robotic operations tracking small bowel disorders and complex colorectal configurations.</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor2.jpg" alt="Colorectal & Intestinal">
+                </div>
+                <div class="card-body-content">
+                    <h3>Colorectal & Intestinal</h3>
+                    <p>Comprehensive laparoscopic or robotic operations tracking small bowel disorders and complex colorectal configurations.</p>
+                </div>
             </div>
             <div class="expertise-card">
-                <span class="expertise-icon">✓</span>
-                <h3>Endocrine & Soft Tissue</h3>
-                <p>Expert analytical treatments encompassing precision Neck and Thyroid extractions along with comprehensive Breast surgical models.</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor2.jpg" alt="Endocrine & Soft Tissue">
+                </div>
+                <div class="card-body-content">
+                    <h3>Endocrine & Soft Tissue</h3>
+                    <p>Expert analytical treatments encompassing precision Neck and Thyroid extractions along with comprehensive Breast surgical models.</p>
+                </div>
             </div>
             <div class="expertise-card">
-                <span class="expertise-icon">✓</span>
-                <h3>General & Vascular Care</h3>
-                <p>Modern clinical routines covering Varicose Vein therapies, complete Diabetic Foot evaluations, and modern Sutureless Circumcisions.</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor2.jpg" alt="General & Vascular Care">
+                </div>
+                <div class="card-body-content">
+                    <h3>General & Vascular Care</h3>
+                    <p>Modern clinical routines covering Varicose Vein therapies, complete Diabetic Foot evaluations, and modern Sutureless Circumcisions.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -882,35 +939,59 @@
         <h2 class="section-title">Awards & Accomplishments</h2>
         <div class="awards-grid">
             <div class="award-card">
-                <span class="award-badge">✦</span>
-                <h3 class="award-title">GEM Award</h3>
-                <p class="award-org">Max Healthcare (2024)</p>
-                <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 10px;">Presented for outstanding clinical performance metrics and excellence in patient outcomes.</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor3.jpg" alt="GEM Award">
+                </div>
+                <div class="card-body-content">
+                    <h3 class="award-title">GEM Award</h3>
+                    <p class="award-org">Max Healthcare (2024)</p>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 10px;">Presented for outstanding clinical performance metrics and excellence in patient outcomes.</p>
+                </div>
             </div>
             <div class="award-card">
-                <span class="award-badge">✦</span>
-                <h3 class="award-title">Dr. O.N. Vyas Gold Medal</h3>
-                <p class="award-org">Highest Marks in Orthopaedics / Surgery</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor3.jpg" alt="Dr. O.N. Vyas Gold Medal">
+                </div>
+                <div class="card-body-content">
+                    <h3 class="award-title">Dr. O.N. Vyas Gold Medal</h3>
+                    <p class="award-org">Highest Marks in Orthopaedics / Surgery</p>
+                </div>
             </div>
             <div class="award-card">
-                <span class="award-badge">✦</span>
-                <h3 class="award-title">Shri Ram Murti Bronze Medal</h3>
-                <p class="award-org">MBBS Graduation Batch (2007)</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor3.jpg" alt="Shri Ram Murti Bronze Medal">
+                </div>
+                <div class="card-body-content">
+                    <h3 class="award-title">Shri Ram Murti Bronze Medal</h3>
+                    <p class="award-org">MBBS Graduation Batch (2007)</p>
+                </div>
             </div>
             <div class="award-card">
-                <span class="award-badge">✦</span>
-                <h3 class="award-title">Honours & Distinction</h3>
-                <p class="award-org">Conferred for Academic Excellence in E.N.T. and Surgery</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor3.jpg" alt="Honours & Distinction">
+                </div>
+                <div class="card-body-content">
+                    <h3 class="award-title">Honours & Distinction</h3>
+                    <p class="award-org">Conferred for Academic Excellence in E.N.T. and Surgery</p>
+                </div>
             </div>
             <div class="award-card">
-                <span class="award-badge">✦</span>
-                <h3 class="award-title">MASKET Quiz - 1st Runner Up</h3>
-                <p class="award-org">IAGES 16th Annual Congress (2019)</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor3.jpg" alt="MASKET Quiz">
+                </div>
+                <div class="card-body-content">
+                    <h3 class="award-title">MASKET Quiz - 1st Runner Up</h3>
+                    <p class="award-org">IAGES 16th Annual Congress (2019)</p>
+                </div>
             </div>
             <div class="award-card">
-                <span class="award-badge">✦</span>
-                <h3 class="award-title">National Academic Faculty</h3>
-                <p class="award-org">Invited Speaker & Organizer across Key Conferences</p>
+                <div class="card-img-wrapper">
+                    <img src="images/doctor3.jpg" alt="National Academic Faculty">
+                </div>
+                <div class="card-body-content">
+                    <h3 class="award-title">National Academic Faculty</h3>
+                    <p class="award-org">Invited Speaker & Organizer across Key Conferences</p>
+                </div>
             </div>
         </div>
     </section>
@@ -987,7 +1068,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Dr. Rushil Jain. All rights reserved. Professional Medical Portfolio Portfolio.</p>
+        <p>&copy; 2026 Dr. Rushil Jain. All rights reserved. Professional Medical Portfolio.</p>
     </footer>
 
 </body>
