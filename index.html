@@ -668,74 +668,15 @@
             color: var(--text-light);
             letter-spacing: 0.5px;
         }
-        .menu-toggle{
-            display:none;
-            font-size:30px;
-            cursor:pointer;
-            color:var(--text-main);
-            user-select:none;
-        }
-        
+
         /* --- RESPONSIVE ADJUSTMENTS --- */
-        @media (max-width:768px){
-
-        nav{
-            padding:20px 24px;
+        @media (max-width: 1200px) {
+            section { padding: 120px 5%; }
+            .hero { gap: 40px; }
+            .about { gap: 60px; }
+            .contact-section { gap: 60px; }
         }
 
-        .logo{
-            font-size:1.1rem;
-        }
-
-        .menu-toggle{
-            display:block;
-            z-index:1002;
-        }
-
-        .nav-links{
-            position:fixed;
-            top:80px;
-            right:-100%;
-            width:260px;
-            height:calc(100vh - 80px);
-            background:#fff;
-            display:flex;
-            flex-direction:column;
-            align-items:flex-start;
-            gap:25px;
-            padding:40px 30px;
-            box-shadow:-5px 0 20px rgba(0,0,0,0.08);
-            transition:0.35s ease;
-        }
-
-        .nav-links.active{
-            right:0;
-        }
-
-        .nav-links a{
-            font-size:0.95rem;
-            letter-spacing:1px;
-            width:100%;
-        }
-
-        .hero h1{
-            font-size:2.5rem;
-        }
-
-        .section-title{
-             font-size:2rem;
-            margin-bottom:45px;
-        }
-
-        .stat-item{
-            min-width:100%;
-        }
-
-        section{
-            padding:90px 24px;
-        }
-    }
-    
         @media (max-width: 1024px) {
             .hero { flex-direction: column; text-align: center; padding-top: 160px; padding-bottom: 80px; }
             .hero-content { max-width: 100%; }
@@ -759,7 +700,6 @@
             .stat-item { min-width: 100%; }
             section { padding: 100px 24px; }
         }
-        
     </style>
 </head>
 <body>
@@ -767,12 +707,7 @@
     <!-- NAVIGATION -->
     <nav>
         <div class="logo">DR. RUSHIL <span>JAIN</span></div>
-
-        <div class="menu-toggle" id="menu-toggle">
-        ☰
-        </div>
-
-        <div class="nav-links" id="nav-links">
+        <div class="nav-links">
             <a href="#about">About</a>
             <a href="#expertise">Specializations</a>
             <a href="#timeline">Credentials</a>
@@ -1135,26 +1070,6 @@
     <footer>
         <p>&copy; 2026 Dr. Rushil Jain. All rights reserved. Professional Medical Portfolio.</p>
     </footer>
-
-    <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const navLinks = document.getElementById("nav-links");
-
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-
-        menuToggle.innerHTML =
-            navLinks.classList.contains("active") ? "✕" : "☰";
-        });
-
-    // Close menu after clicking a link
-    document.querySelectorAll(".nav-links a").forEach(link=>{
-        link.addEventListener("click",()=>{
-            navLinks.classList.remove("active");
-            menuToggle.innerHTML="☰";
-        });
-    });
-</script>
 
 </body>
 </html>
